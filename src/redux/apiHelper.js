@@ -4,12 +4,14 @@ const missionsURL = 'https://api.spacexdata.com/v3/missions';
 // GET
 export const fetchRocketsAPI = async () => {
   const response = await fetch(rocketsURL);
-  return response.json();
+  const data = await response.json();
+  return data;
 };
 
 export const fetchMissionsAPI = async () => {
   const response = await fetch(missionsURL);
-  return response.json();
+  const data = await response.json();
+  return data;
 };
 
 export default { fetchRocketsAPI, fetchMissionsAPI };

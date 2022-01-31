@@ -7,7 +7,6 @@ const FETCH_MISSIONS = '.space-travelers/missions/FETCH_MISSIONS';
 
 export const fetchMissions = () => async (dispatch) => {
   const missions = await fetchMissionsAPI();
-  console.log(missions);
   const missionsForDispatch = missions.map((mission) => ({
     mission_id: mission.mission_id,
     mission_name: mission.mission_name,
@@ -20,10 +19,10 @@ export const fetchMissions = () => async (dispatch) => {
   });
 };
 
-console.log(fetchMissions());
+fetchMissions();
 
 // ADD REDUCER
-const missions = (state = [], action) => {
+const Missions = (state = [], action) => {
   switch (action.type) {
     case FETCH_MISSIONS:
       return action.payload;
@@ -32,4 +31,4 @@ const missions = (state = [], action) => {
   }
 };
 
-export default { missions };
+export default Missions;
