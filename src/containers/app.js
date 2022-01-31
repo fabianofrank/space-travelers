@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContainerRockets from './containerRockets';
 import ContainerMissions from './containerMissions';
 import Navbar from '../components/navbar';
-import './style.css';
+import '../style.css';
 
 const App = () => (
   <Router>

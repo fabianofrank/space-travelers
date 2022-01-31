@@ -1,21 +1,24 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissionsFromAPI } from '../redux/missions/missions';
-import Mission from './Mission';
-import './Missions.css';
+// import React, { useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { fetchMissionsAPI } from '../redux/apiHelper';
+// import Mission from './Mission';
+// import './missions.css';
 
-function Missions() {
-  const missions = useSelector((state) => state.missions);
+function ContainerMissions() {
   return (
-    <>
-      <div className="h2 d-flex justify-content-center">Our Missions</div>
-      <table className="">
-        <th>
-          <tr> </tr>
-        </th>
-      </table>
-      </>
+    <p>hi</p>
   );
-};
+  // const missions = useSelector((state) => state.missions);
+  // return (
+  //   <>
+  //     <div className="h2 d-flex justify-content-center">Our Missions</div>
+  //     <table className="">
+  //       <th>
+  //         <tr> </tr>
+  //       </th>
+  //     </table>
+  //     </>
+  // );
+}
 
-export defaul Missions;
+export default ContainerMissions;

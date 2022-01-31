@@ -1,9 +1,9 @@
-//Add API helper 
+import { fetchMissionsAPI } from '../apiHelper';
 
 const FETCH_MISSIONS = '.space-travelers/missions/FETCH_MISSIONS';
-const JOIN_MISSION = 'space-travelers/missions/JOIN_MISSION';
+// const JOIN_MISSION = 'space-travelers/missions/JOIN_MISSION';
 
-/const initialState = [];
+// const initialState = [];
 
 export const fetchMissions = () => async (dispatch) => {
   const missions = await fetchMissionsAPI();
@@ -12,7 +12,6 @@ export const fetchMissions = () => async (dispatch) => {
     mission_id: mission.mission_id,
     mission_name: mission.mission_name,
     description: mission.description,
-    reserved: false,
   }));
 
   dispatch({
@@ -22,3 +21,13 @@ export const fetchMissions = () => async (dispatch) => {
 };
 
 // ADD REDUCER
+const missions = (state = [], action) => {
+  switch (action.type) {
+    case FETCH_MISSIONS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export default { missions };
