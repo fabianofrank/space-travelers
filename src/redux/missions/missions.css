@@ -1,0 +1,19 @@
+.margin-right {
+  margin-right: 10%;
+}
+
+.border_right {
+  border-right: 1px solid lightgrey;
+}
+
+.description {
+  width: 65%;
+}
+
+.title {
+  width: 10%;
+}
+
+.bold {
+  font-weight: bold;
+}
