@@ -33,3 +33,7 @@ nav {
 .nav > * {
   margin-right: 24px;
 }
+
+.navbar-links:active {
+  color: brown;
+}

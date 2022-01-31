@@ -1,8 +1,7 @@
-const ContainerMissions = () => {
-  console.log('hi');
+function ContainerRockets() {
   return (
     <p>missions</p>
   );
-};
+}
 
-export default { ContainerMissions };
+export default ContainerRockets;

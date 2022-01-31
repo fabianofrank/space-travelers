@@ -10,9 +10,9 @@ const Navbar = () => (
         <h1>SPACE TRAVELER&apos; HUB</h1>
       </div>
       <div className="nav">
-        <NavLink activeClassName="selected" to="/">Rockets</NavLink>
-        <NavLink activeClassName="selected" to="/missions">Missions</NavLink>
-        <NavLink activeClassName="selected" to="/profile">Profile</NavLink>
+        <NavLink className="navbar-links" to="/">Rockets</NavLink>
+        <NavLink className="navbar-links" to="/missions">Missions</NavLink>
+        <NavLink className="navbar-links" to="/profile">Profile</NavLink>
       </div>
     </nav>
   </header>

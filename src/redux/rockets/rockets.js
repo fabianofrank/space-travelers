@@ -19,6 +19,8 @@ export const fetchRockets = () => async (dispatch) => {
   });
 };
 
+fetchRockets();
+
 // RUDECER
 const rockets = (state = [], action) => {
   switch (action.type) {
