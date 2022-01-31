@@ -1,5 +1,5 @@
 import React from 'react';
-import {  BrowserRouter as Router, Routes, Route,} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContainerRockets from './containerRockets';
 import ContainerMissions from './containerMissions';
 import Navbar from '../components/navbar';
