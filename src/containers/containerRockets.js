@@ -1,6 +1,10 @@
+import Rockets from '../components/Rockets';
+
 function ContainerRockets() {
   return (
-    <p>missions</p>
+    <div>
+      <Rockets />
+    </div>
   );
 }
 

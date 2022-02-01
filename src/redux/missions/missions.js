@@ -2,7 +2,6 @@ import { fetchMissionsAPI } from '../apiHelper';
 
 // ACTIONS TYPE
 const FETCH_MISSIONS = '.space-travelers/missions/FETCH_MISSIONS';
-// const JOIN_MISSION = 'space-travelers/missions/JOIN_MISSION';
 
 // ACTION
 export const fetchMissions = () => async (dispatch) => {
