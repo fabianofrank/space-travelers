@@ -1,28 +1,25 @@
 import { fetchMissionsAPI } from '../apiHelper';
 
+// ACTIONS TYPE
 const FETCH_MISSIONS = '.space-travelers/missions/FETCH_MISSIONS';
 // const JOIN_MISSION = 'space-travelers/missions/JOIN_MISSION';
 
-// const initialState = [];
-
+// ACTION
 export const fetchMissions = () => async (dispatch) => {
-  const missions = await fetchMissionsAPI();
-  const missionsForDispatch = missions.map((mission) => ({
-    mission_id: mission.mission_id,
-    mission_name: mission.mission_name,
+  const response = await fetchMissionsAPI();
+  const missionsDispatched = response.map((mission) => ({
+    id: mission.mission_id,
+    name: mission.mission_name,
     description: mission.description,
   }));
-
   dispatch({
     type: FETCH_MISSIONS,
-    payload: missionsForDispatch,
+    payload: missionsDispatched,
   });
 };
 
-fetchMissions();
-
-// ADD REDUCER
-const Missions = (state = [], action) => {
+// REDUCER
+const missions = (state = [], action) => {
   switch (action.type) {
     case FETCH_MISSIONS:
       return action.payload;
@@ -31,4 +28,4 @@ const Missions = (state = [], action) => {
   }
 };
 
-export default Missions;
+export default missions;
