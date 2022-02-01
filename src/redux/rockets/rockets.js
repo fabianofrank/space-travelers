@@ -6,7 +6,8 @@ export const fetchRockets = () => async (dispatch) => {
   const rockets = await fetchRocketsAPI();
   const rocketsForDispatch = rockets.map((rocket) => ({
     id: rocket.id,
-    name: rocket.name,
+    name: rocket.rocket_name,
+    description: rocket.description,
     image: rocket.flickr_images,
   }));
 
@@ -27,4 +28,4 @@ const rockets = (state = [], action) => {
   }
 };
 
-export default { rockets };
+export default rockets;
