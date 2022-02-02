@@ -6,22 +6,12 @@ const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
-  const rocketReservation = (value = false, e) => {
-    const returnReservedRocket = rockets.map((rocket) => {
-      if (rocket.id !== e.target.parentElement.parentElement.id) {
-        return rocket;
-      }
-      return { ...rocket, reserved: value };
-    });
-    return returnReservedRocket;
-  };
-
   const handleReservation = (e) => {
-    dispatch(updateRockets(rocketReservation(true, e)));
+    dispatch(updateRockets((true, e)));
   };
 
   const handleCancelation = (e) => {
-    dispatch(updateRockets(rocketReservation(false, e)));
+    dispatch(updateRockets((false, e)));
   };
 
   useEffect(() => {
@@ -45,8 +35,8 @@ const Rockets = () => {
             </ul>
             <div>
               {rockets.reserved
-                ? (<button type="button" onClick={handleCancelation}>CANCEL RESERVATION</button>)
-                : (<button type="button" onClick={handleReservation}>RESERVE ROCKET</button>)}
+                ? (<button type="button" onClick={() => handleCancelation(rockets.id)}>CANCEL RESERVATION</button>)
+                : (<button type="button" onClick={() => handleReservation(rockets.id)}>RESERVE ROCKET</button>)}
             </div>
           </div>
         ))}

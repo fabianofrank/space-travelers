@@ -30,7 +30,10 @@ const rockets = (state = [], action) => {
     case FETCH_ROCKETS:
       return action.payload;
     case UPDATE_ROCKETS:
-      return action.payload;
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: !rocket.reserved };
+      });
     default:
       return state;
   }
