@@ -1,11 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# SPACE TRAVELERS' HUB
 
 > A web application that conects API's in order to provide the user with information and add their preffered items.
 
-![screenshot](./screenshot.png)
-![screenshot](./screenshot2.png)
+![screenshot](./public/screenshot.png)
+![screenshot](./public/screenshot2.png)
 
 ## Built With
 
@@ -13,7 +13,7 @@
 - React
 - Redux
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://livedemo.com)
 
