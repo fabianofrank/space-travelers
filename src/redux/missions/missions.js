@@ -29,7 +29,10 @@ const missions = (state = [], action) => {
     case FETCH_MISSIONS:
       return action.payload;
     case UPDATE_MISSIONS:
-      return action.payload;
+      return state.map((mission) => {
+        if (mission.id !== action.payload) return mission;
+        return { ...mission, reserved: !mission.reserved };
+      });
     default:
       return state;
   }

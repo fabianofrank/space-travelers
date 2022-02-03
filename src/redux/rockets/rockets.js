@@ -22,8 +22,6 @@ export const updateRockets = (payload) => ({
   payload,
 });
 
-fetchRockets();
-
 const rockets = (state = [], action) => {
   switch (action.type) {
     case FETCH_ROCKETS:

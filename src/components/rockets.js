@@ -1,22 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchRockets, updateRockets } from '../redux/rockets/rockets';
+import { updateRockets } from '../redux/rockets/rockets';
 
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
-  const handleReservation = (e) => {
-    dispatch(updateRockets((true, e)));
+  const handleReservation = (id) => {
+    dispatch(updateRockets((id)));
   };
 
-  const handleCancelation = (e) => {
-    dispatch(updateRockets((false, e)));
+  const handleCancelation = (id) => {
+    dispatch(updateRockets((id)));
   };
-
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, []);
 
   return (
     <div>
