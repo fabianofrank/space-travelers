@@ -17,6 +17,13 @@ export const fetchRockets = () => async (dispatch) => {
   });
 };
 
+export const updateRockets = (payload) => ({
+  type: UPDATE_ROCKETS,
+  payload,
+});
+
+fetchRockets();
+
 const rockets = (state = [], action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
