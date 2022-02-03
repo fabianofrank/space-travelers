@@ -6,8 +6,15 @@
   color: rgb(80, 80, 80);
 }
 
+a:link {
+  text-decoration: none;
+}
+
 nav {
   display: flex;
+  font-family: "Roboto";
+  text-decoration: none;
+  font-weight:bolder;
   align-items: center;
   padding: 6px;
 }
@@ -36,4 +43,8 @@ nav {
 
 .navbar-links:active {
   color: brown;
+}
+
+.rocket-list > li {
+  list-style: none;
 }
