@@ -4,7 +4,7 @@ import logo from '../planet.png';
 
 const Navbar = () => (
   <header>
-    <nav>
+    <nav className="pb-4 border-bottom">
       <div className="logo">
         <img id="logo" src={logo} alt="logo" />
         <h1>SPACE TRAVELER&apos; HUB</h1>

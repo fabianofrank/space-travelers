@@ -7,24 +7,28 @@ const Profile = () => {
 
   return (
     <div>
-      <div>
-        <div>
-          <h3>My Missions</h3>
-          <ul>
-            {missions.filter((mission) => mission.reserved).map((mission) => (
-              <li key={mission.id}>{mission.name}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h3>My Rockets</h3>
-          <ul>
-            {rockets.filter((rocket) => rocket.reserved).map((rocket) => (
-              <li key={rocket.id}>{rocket.name}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <table className="table table-hover">
+        <thead>
+          <tr>
+            <th>My Missions</th>
+            <th>My Rockets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="">
+              {missions.filter((mission) => mission.reserved).map((mission) => (
+                <li key={mission.id}>{mission.name}</li>
+              ))}
+            </td>
+            <td>
+              {rockets.filter((rocket) => rocket.reserved).map((rocket) => (
+                <li key={rocket.id}>{rocket.name}</li>
+              ))}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };

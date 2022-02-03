@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Profile from '../components/profile';
 
 function ContainerProfile() {
@@ -9,3 +10,4 @@ function ContainerProfile() {
 }
 
 export default ContainerProfile;
+/* eslint-enable */
