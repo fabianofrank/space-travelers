@@ -12,9 +12,9 @@ a:link {
 
 nav {
   display: flex;
-  font-family: "Roboto";
+  font-family: Courier, "Lucida Console", monospace;
   text-decoration: none;
-  font-weight:bolder;
+  font-weight: bolder;
   align-items: center;
   padding: 6px;
 }

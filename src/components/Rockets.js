@@ -32,7 +32,7 @@ const Rockets = () => {
                 <li className="">
                   {rockets.reserved ? (<button type="button" className="btn btn-warning mt-2">Reserved</button>) : (<span className="d-print-none" />)}
                 </li>
-                <li className="card-title capitalized">{rockets.name}</li>
+                <li className="card-title capitalized fw-bold">{rockets.name}</li>
                 <li className="card-text">{rockets.description}</li>
                 <li>
                   {rockets.reserved
