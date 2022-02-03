@@ -1,6 +1,10 @@
+import Profile from '../components/profile';
+
 function ContainerProfile() {
   return (
-    <p>missions</p>
+    <div>
+      <Profile />
+    </div>
   );
 }
 
