@@ -1,4 +1,4 @@
-import Rockets from '../components/Rockets';
+import Rockets from '../components/rockets';
 
 function ContainerRockets() {
   return (

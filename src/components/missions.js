@@ -1,29 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissions, updateMissions } from '../redux/missions/missions';
+import { updateMissions } from '../redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, []);
-
-  const toggleReservation = (value = false, e) => {
-    const newState = missions.map((mission) => {
-      if (mission.id !== e.target.parentElement.parentElement.id) return mission;
-      return { ...mission, reserved: value };
-    });
-    return newState;
+  const joinMission = (id) => {
+    dispatch(updateMissions(id));
   };
 
-  const joinMission = (e) => {
-    dispatch(updateMissions(toggleReservation(true, e)));
-  };
-
-  const leaveMission = (e) => {
-    dispatch(updateMissions(toggleReservation(false, e)));
+  const leaveMission = (id) => {
+    dispatch(updateMissions(id));
   };
 
   return (
@@ -47,8 +35,8 @@ const Missions = () => {
                 : (<td>NOT A MEMBER</td>)}
               <td>
                 {missions.reserved
-                  ? (<button onClick={leaveMission} type="button">Leave Mission</button>)
-                  : (<button onClick={joinMission} type="button">Join Mission</button>)}
+                  ? (<button onClick={() => leaveMission(missions.id)} type="button">Leave Mission</button>)
+                  : (<button onClick={() => joinMission(missions.id)} type="button">Join Mission</button>)}
               </td>
             </tr>
           ))}
