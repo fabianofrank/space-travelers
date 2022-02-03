@@ -1,6 +1,6 @@
 function ContainerProfile() {
   return (
-    <p>missions</p>
+    <table className="table table-striped">missions</table>
   );
 }
 

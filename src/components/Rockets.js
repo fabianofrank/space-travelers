@@ -30,7 +30,7 @@ const Rockets = () => {
             <div className="w-50 text d-flex align-content left">
               <ul className="rocket-list">
                 <li className="">
-                  {rockets.reserved ? (<button type="button" className="btn btn-warning">Reserved</button>) : (<span className="d-print-none" />)}
+                  {rockets.reserved ? (<button type="button" className="btn btn-warning mt-2">Reserved</button>) : (<span className="d-print-none" />)}
                 </li>
                 <li className="card-title capitalized">{rockets.name}</li>
                 <li className="card-text">{rockets.description}</li>
