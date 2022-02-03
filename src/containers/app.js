@@ -1,10 +1,13 @@
 import React from 'react';
+// import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContainerRockets from './containerRockets';
 import ContainerMissions from './containerMissions';
 import ContainerProfile from './containerProfile';
 import Navbar from '../components/navbar';
 import '../style.css';
+// import { fetchRockets } from '../redux/rockets/rockets';
+// import { fetchMissions } from '../redux/missions/missions';
 
 const App = () => (
   <Router>

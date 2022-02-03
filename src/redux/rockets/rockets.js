@@ -11,19 +11,11 @@ export const fetchRockets = () => async (dispatch) => {
     description: rocket.description,
     image: rocket.flickr_images,
   }));
-
   dispatch({
     type: FETCH_ROCKETS,
     payload: rocketsForDispatch,
   });
 };
-
-export const updateRockets = (payload) => ({
-  type: UPDATE_ROCKETS,
-  payload,
-});
-
-fetchRockets();
 
 const rockets = (state = [], action) => {
   switch (action.type) {
