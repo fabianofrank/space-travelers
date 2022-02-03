@@ -28,7 +28,7 @@ const Missions = () => {
 
   return (
     <div>
-      <table>
+      <table className="table table-striped table-hover">
         <thead>
           <tr>
             <th>Mission</th>
@@ -40,11 +40,13 @@ const Missions = () => {
         <tbody>
           {missions.map((missions) => (
             <tr key={missions.id} id={missions.id}>
-              <td>{missions.name}</td>
-              <td>{missions.description}</td>
-              {missions.reserved
-                ? (<td>ACTIVE MEMBER</td>)
-                : (<td>NOT A MEMBER</td>)}
+              <td className="fw-bold ml-2">{missions.name}</td>
+              <td className="col-12">{missions.description}</td>
+              <td>
+                {missions.reserved
+                  ? (<button type="button" className="btn btn-secondary">ACTIVE MEMBER</button>)
+                  : (<button type="button" className="btn btn-secondary">NOT A MEMBER</button>)}
+              </td>
               <td>
                 {missions.reserved
                   ? (<button onClick={leaveMission} type="button">Leave Mission</button>)

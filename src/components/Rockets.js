@@ -21,21 +21,21 @@ const Rockets = () => {
         <div className="" key={rockets.id} id={rockets.id}>
           <div className="d-flex border">
             <div className="my-4 mx-4">
-              <img className="card" with="120" height="220" src={rockets.image} alt="rocket" />
+              <img src={rockets.image} alt="rocket" with="70" height="120" />
             </div>
-            <div className="w-50 text">
+            <div className="w-50 text d-flex align-content left">
               <ul className="rocket-list">
                 <li className="">
-                  {rockets.reserved ? (<span>Reserved</span>) : (<span className="d-print-none" />)}
+                  {rockets.reserved ? (<button type="button" className="btn btn-warning mt-2">Reserved</button>) : (<span className="d-print-none" />)}
                 </li>
-                <li className="card-title capitalized">{rockets.name}</li>
+                <li className="card-title capitalized fw-bold">{rockets.name}</li>
                 <li className="card-text">{rockets.description}</li>
+                <li>
+                  {rockets.reserved
+                    ? (<button type="button" className="btn btn-primary" onClick={() => handleCancelation(rockets.id)}>CANCEL RESERVATION</button>)
+                    : (<button type="button" className="btn btn-primary" onClick={() => handleReservation(rockets.id)}>RESERVE ROCKET</button>)}
+                </li>
               </ul>
-              <div>
-                {rockets.reserved
-                  ? (<button type="button" className="btn btn-primary" onClick={() => handleCancelation(rockets.id)}>CANCEL RESERVATION</button>)
-                  : (<button type="button" className="btn btn-primary" onClick={() => handleReservation(rockets.id)}>RESERVE ROCKET</button>)}
-              </div>
             </div>
           </div>
         </div>
