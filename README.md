@@ -4,19 +4,18 @@
 
 > A web application that conects API's in order to provide the user with information and add their preffered items.
 
-![screenshot](./public/screenshot.png)
-![screenshot](./public/screenshot2.png)
+![space_mock](https://user-images.githubusercontent.com/68971295/196520747-6ed3ffed-af27-42ed-aeda-cf1610e2de19.png)
+![space_mock1](https://user-images.githubusercontent.com/68971295/196520763-d96f899b-e431-44b9-bece-5fd9147e0e1b.png)
+
+
+
+### [Demo](https://fabianofrank.github.io/space-travelers/)
 
 ## Built With
 
 - Javascript/HTML5/CSS3/Bootstrap
 - React
 - Redux
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
 
 ## Getting Started
 
